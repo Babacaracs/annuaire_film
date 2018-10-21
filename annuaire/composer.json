@@ -1,11 +1,5 @@
 {
-    "name": "annuaire/twig",
-    "authors": [
-        {
-            "name": "Babacaracs",
-            "email": "43033642+Babacaracs@users.noreply.github.com"
-        }
-    ],
+    "name": "babacar/twig",
     "require": {
         "twig/twig": "^2.0"
     }

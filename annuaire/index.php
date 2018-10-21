@@ -1,30 +1,21 @@
-<?php 
-require_once './vendor/autoload.php';
+<?php
+
+require('controller/frontend.php');
 
 
-
-function film(){
-
-	$bdd = new PDO('mysql:host=localhost;dbname=annuaire;charset=utf8', 'root', '');
-
-$film=$bdd->query('SELECT * FROM `film`  ');
-return $film;
+if (isset($_GET['action'])) {
+    if ($_GET['action'] == 'listPosts') {
+        listPosts();
+    }
+    elseif ($_GET['action'] == 'post') {
+        if (isset($_GET['id_film']) && $_GET['id_film'] > 0) {
+            post();
+        }
+        else {
+            echo 'Erreur : ';
+        }
+    }
 }
-
-
-$loader = new Twig_loader_Filesystem(__DIR__.'/model');
-	$twig= new Twig_Environment($loader,[
-		'cache' =>false, //__DIR__.'/temp'
-	]);
-
-	echo $twig->render("home.twig",['film'=>film()]);
-
-//   while ($reponse=$bob->fetch())
-// {
-
-// 	echo $reponse['id_film'] .' '.$reponse['nom_film'].' '.$reponse['type'] . '<br />';
-// }
-
-// $bob->closeCursor();
-
-
+else {
+    listPosts();
+}
