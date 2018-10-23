@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">     
- 
-
+<html lang="fr" dir="ltr">
+  <head>
+    <style type="text/css">
+      body{
+        background-image: url(../public/img/bg1.jpg);
+      }
+    </style>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
-  <title> Sénémania</title>
+    <title>Administration</title>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">   
-  <!-- Brand -->
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">		
+  
   <a class="navbar-brand" href="../index.php" id="logo">Sénémania</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -29,16 +29,16 @@
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="../index.php">Acceuil</a>
+       <li class="nav-item">
+        <a class="nav-link" href="../index.php">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="realisateur.php">les realisateurs</a>
+        <a class="nav-link" href="../model/realisateur.php">les realisateurs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="acteur.php">les acteurs</a>
+        <a class="nav-link" href="../model/acteur.php">les acteurs</a>
       </li> 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,40 +48,22 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <li class="nav-item">
-        <a class="nav-link" href="../admin/index.php">Administration</a>
-      </li> 
+       
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Administration
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="lister.php">supprimer un film</a>
+          <a class="dropdown-item" href="ajout.php">ajouter un film</a>
+          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+        </div>
+      </li>
     </ul>
   </div> 
 </nav>
-
-{% block head %}
-  <title>Detail acteur</title>
-
-{% endblock %}
-<center><h1>Les acteurs</h1></center>
-<br><br>
-
-<div class="row">
-  
-  {% for acteur in act %}
-  
-
-      <div class="col-md-3 col-sm-6 mb-4">
-   
-    <img src="{{acteur.photo_acteur}}" > <br>
-      <p><span style="font-weight: bold;">Nom</span> : {{acteur.nom_acteur}}</p>
-      <p><span style="font-weight: bold;">Date de naisance </span> : {{acteur.date_naiss}}</p>
-      <p><span style="font-weight: bold;">Pays </span> : {{acteur.pays}}</p>
- 
-   </div>
-
-
-  {% endfor  %}
-  </div>
-
+<br><br><br><br><br><br><br><br><br><br>
+<center><h1>Bienvenue dans l'espace d'administration</h1></center>
 
 </body>
-
 </html>
-

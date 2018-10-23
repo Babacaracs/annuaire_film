@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">     
- 
-
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8"> <link rel="stylesheet" href="../public/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
-  <title> Sénémania</title>
-</head>
-<body>
+   
+    
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">   
+    <title></title>
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">   
   <!-- Brand -->
   <a class="navbar-brand" href="../index.php" id="logo">Sénémania</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -29,16 +25,16 @@
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="../index.php">Acceuil</a>
+       <li class="nav-item">
+        <a class="nav-link" href="../index.php">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="realisateur.php">les realisateurs</a>
+        <a class="nav-link" href="../model/realisateur.php">les realisateurs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="acteur.php">les acteurs</a>
+        <a class="nav-link" href="../model/acteur.php">les acteurs</a>
       </li> 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,40 +44,27 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <li class="nav-item">
+      
+      <li class="nav-item">
         <a class="nav-link" href="../admin/index.php">Administration</a>
       </li> 
     </ul>
   </div> 
 </nav>
-
-{% block head %}
-  <title>Detail acteur</title>
-
-{% endblock %}
-<center><h1>Les acteurs</h1></center>
-<br><br>
-
-<div class="row">
-  
-  {% for acteur in act %}
-  
-
-      <div class="col-md-3 col-sm-6 mb-4">
-   
-    <img src="{{acteur.photo_acteur}}" > <br>
-      <p><span style="font-weight: bold;">Nom</span> : {{acteur.nom_acteur}}</p>
-      <p><span style="font-weight: bold;">Date de naisance </span> : {{acteur.date_naiss}}</p>
-      <p><span style="font-weight: bold;">Pays </span> : {{acteur.pays}}</p>
  
-   </div>
-
-
-  {% endfor  %}
+    <div class="couleurssss">
+  	<center>
+  <h1>SénéMania</h1>
+  </center>
   </div>
-
-
-</body>
-
+  <div class="container1">
+    <form class="" action="connexion.php" method="POST">
+      <input type="text" name="admin" placeholder="Identifiant">
+      <input type="password" name="password" placeholder="Password">
+      <div class="manquer">
+        <input type="submit" name="envoyer" value="Se connecter">
+      </div>
+    </form>
+  </div>
+  </body>
 </html>
-
