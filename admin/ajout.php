@@ -12,7 +12,7 @@
     <title></title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">   
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">   
   <!-- Brand -->
   <a class="navbar-brand" href="../index.php" id="logo">Sénémania</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,7 +27,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" href="../index.php">Acceuil</a>
+        <a class="nav-link" href="../index.php">Accueil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../model/realisateur.php">les realisateurs</a>
